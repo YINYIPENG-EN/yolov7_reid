@@ -113,7 +113,7 @@ CMC curve, Rank-10 :99.5%
 ```
 
 
-
+CSDN：http://t.csdnimg.cn/mh1Hg
 
 
 #  训练预权重下载：

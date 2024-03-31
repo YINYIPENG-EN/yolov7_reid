@@ -76,6 +76,7 @@ GUI部分未开源，**该部分为有偿提供**。
 </p>
 
 
+CSDN文章链接:http://t.csdnimg.cn/sU2Nu
 
 # 权重下载
 

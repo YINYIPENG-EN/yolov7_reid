@@ -10,7 +10,7 @@ reid网络采用resnet50_ibn_a（权重需要和defaults.py中的MODEL.NAME对�
 
 该项目<u>没有将yolov7训练加入</u>，只是将检测功能和reid进行了整理。
 
-**person_search下只进行检测**，不进行reid的训练，reid的训练在yolov5_reid中。
+**person_search下只进行检测**，不进行reid的训练，reid的训练在yolov7_reid中。
 
 # 从视频中获取陌生人(待检测人员)图像
 

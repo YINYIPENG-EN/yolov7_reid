@@ -112,7 +112,7 @@ def train(cfg, args):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Yolo v5 with ReID Baseline Training")
+    parser = argparse.ArgumentParser(description="Yolo v7 with ReID Baseline Training")
     parser.add_argument(
         "--config_file", type=str, default="configs/softmax_triplet.yml", help="path to config file"
     )

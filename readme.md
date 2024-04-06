@@ -18,6 +18,7 @@ pytorch-ignite : 0.4.11
 
 将 **r50_ibn_2.pth，resnet50-19c8e357.pth**放在yolov7_reid/weights下【文末有权重下载链接】
 
+
 ```bash
 
 python tools/train.py --config_file configs/softmax_triplet.yml
@@ -25,6 +26,16 @@ python tools/train.py --config_file configs/softmax_triplet.yml
 ```
 
 输入上述命令可快速开启训练~
+
+更新：支持中断后的恢复训练或者用于微调
+
+输入命令：
+
+```bash
+
+python tools/train.py --config_file configs/softmax_triplet.yml --weights 【weight path】 --resume
+
+```
 
 【**这里只是reid的训练，不含yolov7的训练部分**，这是两个算法，请务必分清！这里只是两个算法做级联】
 
@@ -45,6 +56,8 @@ ps:arrow_right:**该训练reid项目与person_search项目是独立的！！**�
 --pretrain_choice: Imagenet
 
 --IF_WITH_CENTER: us center loss, True or False.
+
+--resume:resume train
 
 :fountain_pen:
 

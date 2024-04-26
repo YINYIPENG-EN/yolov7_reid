@@ -128,17 +128,14 @@ class Baseline(nn.Module):
         if pretrain_choice == 'imagenet':
             # ---------------------------------
             model = self.base  # model
-            model_dict = model.state_dict()  # get model defaults weight
+            # model_dict = model.state_dict()  # get model defaults weight
             pretrained_dict = torch.load(model_path)  # pretrained weight load
-            # pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict.keys() == pretrained_dict.keys()}
-            # model_dict.update(pretrained_dict)  # update weight
-            # model.load_state_dict(model_dict)  # load pretrained into model
             modified_dict = {}
-            for k,v in pretrained_dict.items():
+            for k, v in pretrained_dict.items():
                 if 'base.' in k:
                     k = k.replace('base.', '')
                 modified_dict[k] = v
-            print(model.load_state_dict(modified_dict, strict=False))  # load pretrained into model
+            print(model.load_state_dict(modified_dict, strict=False))
             print('Loading pretrained ImageNet model......')
 
         self.gap = nn.AdaptiveAvgPool2d(1)  # add avgpool layer
@@ -186,5 +183,6 @@ class Baseline(nn.Module):
             if 'classifier' in i:
                 continue
             self.state_dict()[i].copy_(param_dict[i])
+        print("权重已加载")
 
 

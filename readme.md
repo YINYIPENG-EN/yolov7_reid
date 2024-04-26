@@ -37,6 +37,12 @@ python tools/train.py --config_file configs/softmax_triplet.yml --weights 【wei
 
 ```
 
+更新：支持冻结训练，加快训练速度，或在微调中使用。输入命令：
+
+```bash
+python tools/train.py --weights 【weight path】 --freeze --freeze_epoch 20
+```
+
 【**这里只是reid的训练，不含yolov7的训练部分**，这是两个算法，请务必分清！这里只是两个算法做级联】
 
 ps:arrow_right:**该训练reid项目与person_search项目是独立的！！**训练完reid后，把训练好的权重放到**person_search/weights**下，切换到peron_search项目中在去进行reid识别【不然有时候会报can't import xxx】。
@@ -58,6 +64,10 @@ ps:arrow_right:**该训练reid项目与person_search项目是独立的！！**�
 --IF_WITH_CENTER: us center loss, True or False.
 
 --resume:resume train
+
+--freeze: freeze train
+
+--freeze:freeze train epochs
 
 :fountain_pen:
 
@@ -146,3 +156,5 @@ CSDN：http://t.csdnimg.cn/mh1Hg
 训练代码为200RMB(不含tensorboard)，如果还需要包含tensorboard可视化为300RMB（含训练代码）。【拒绝讲价】
 
 联系方式：wechat  y24065939s
+
+tensorboard新增内容：hard sample可视化
